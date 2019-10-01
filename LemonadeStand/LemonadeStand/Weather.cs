@@ -15,6 +15,14 @@ namespace LemonadeStand
         public string predictForecast;
 
         //constructor (Spawner)
+        public Weather()
+        {
+            weatherConditions = new List<string>();
+            weatherConditions.Add("Sunny");
+            weatherConditions.Add("Cloudy");
+            weatherConditions.Add("Rainy");
+            weatherConditions.Add("Partly Cloudy");
+        }
 
         //member methods (Can Do)
     }

@@ -16,6 +16,12 @@ namespace LemonadeStand
         //constructor (Spawner)
 
         //member methods (Can Do)
+        public void RunGame()
+        {
+            DisplayRules();
+        }
+
+
         public void DisplayRules()
         {
             Console.WriteLine("Welcome to the Lemonade Stand! You will sell lemonade for 7 days.");

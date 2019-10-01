@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class UserInterface
+    static class UserInterface
     {
         //member vairables (Has A)
 
