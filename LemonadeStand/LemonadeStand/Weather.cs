@@ -22,8 +22,17 @@ namespace LemonadeStand
             weatherConditions.Add("Cloudy");
             weatherConditions.Add("Rainy");
             weatherConditions.Add("Partly Cloudy");
+            weatherConditions.Add("Hazy");
         }
 
         //member methods (Can Do)
+        public void WeatherForecast()
+        {
+            Random rng = new Random();
+
+            int index = rng.Next(weatherConditions.Count);
+
+            condition = weatherConditions[index];
+        }
     }
 }

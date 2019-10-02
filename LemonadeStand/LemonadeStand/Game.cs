@@ -14,6 +14,10 @@ namespace LemonadeStand
         int currentDay;
 
         //constructor (Spawner)
+        public Game()
+        {
+
+        }
 
         //member methods (Can Do)
         public void RunGame()

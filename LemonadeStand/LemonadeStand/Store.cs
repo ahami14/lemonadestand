@@ -11,17 +11,17 @@ namespace LemonadeStand
         //member vairables (Has A)
         Player player;
         int cupAmount;
-        int lemonAmount;
-        int sugarAmount;
-        int iceAmount;
+        int amountOfLemons;
+        int amountOfSugar;
+        int amountOfIceCubes;
 
         //constructor (Spawner)
         public Store()
         {
             cupAmount = 0;
-            lemonAmount = 0;
-            sugarAmount = 0;
-            iceAmount = 0;
+            amountOfLemons = 0;
+            amountOfSugar = 0;
+            amountOfIceCubes = 0;
         }
 
         //member methods (Can Do)// for now let's get these set up in here, then we can figure out how to put them in game class
@@ -39,11 +39,11 @@ namespace LemonadeStand
             Console.WriteLine("How many cups are you buying?");
             cupAmount = int.Parse(Console.ReadLine());
             Console.WriteLine("How many lemons are you buying?");
-            lemonAmount = int.Parse(Console.ReadLine());
+            amountOfLemons = int.Parse(Console.ReadLine());
             Console.WriteLine("How many cups of sugar are you buying?");
-            sugarAmount = int.Parse(Console.ReadLine());
+            amountOfSugar = int.Parse(Console.ReadLine());
             Console.WriteLine("How many ice cubes are you buying?");
-            iceAmount = int.Parse(Console.ReadLine());
+            amountOfIceCubes = int.Parse(Console.ReadLine());
         }
         
     }
