@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Sugar
+    class Sugar: Item
     {
         //member variables (Has A)
 

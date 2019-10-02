@@ -19,9 +19,13 @@ namespace LemonadeStand
         //constructor (Spawner)
         public Player()
         {
-
+            inventory = new Inventory();
+            wallet = new Wallet();
+            recipe = new Recipe();
+            pitcher = new Pitcher();
         }
 
         //member methods (Can Do)
+
     }
 }

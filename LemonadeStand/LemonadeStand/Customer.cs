@@ -17,31 +17,16 @@ namespace LemonadeStand
         //constructor (Spawner)
         public Customer()
         {
+            names = new List<string>();
             
+
         }
 
         //member methods (Can Do)
-        public void customerOne()//this is a basic outline, however we may need to find a way to increment the sale in game class
-        {//Actually, it is possible that we could increment here, and when this is called in game class it will increment and display there
-            if(conditions.condition == "Sunny" || conditions.condition == "Hazy" )
-            {
-                Console.WriteLine("CustomerOne bought lemonade!");//these will be increments soon, so we don't have to announce every time a customer buys a drink
-            }
-            else
-            {
-                Console.WriteLine("CustomerOne did not buy Lemonade.");
-            }
-        }
-        public void customerTwo()
+        public void DecisionToBuy()
         {
-            if (conditions.condition == "Sunny")
-            {
-                Console.WriteLine("CustomerTwo bought lemonade!");//these will be increments soon, so we don't have to announce every time a customer buys a drink
-            }
-            else
-            {
-                Console.WriteLine("CustomerTwo did not buy Lemonade.");
-            }
+
         }
+            
     }
 }

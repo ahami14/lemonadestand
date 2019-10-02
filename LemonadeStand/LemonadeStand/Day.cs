@@ -16,18 +16,16 @@ namespace LemonadeStand
         //constructor (Spawner)
         public Day()
         {
-            days = new List<string>();
-            days.Add("Monday");
-            days.Add("Tuesday");
-            days.Add("Wednesday");
-            days.Add("Thursday");
-            days.Add("Friday");
-            days.Add("Saturday");
-            days.Add("Sunday");
+            weather = new Weather();
+            days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
         }
 
 
         //member methods (Can Do)
+        public void DisplayDay()
+        {
+
+        }
     }
 }
