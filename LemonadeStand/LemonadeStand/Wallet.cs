@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Wallet
     {
         //member variable (Has A)
-        private double money;
+        private double money; //make a money method public so we can subtract from the wallet since this one is private
 
         //constructor (Spawner)
         public Wallet()
@@ -18,5 +18,10 @@ namespace LemonadeStand
         }
 
         //member method (Can Do)
+        public double Money
+        {
+            get => money;
+            set => money = value;
+        }
     }
 }

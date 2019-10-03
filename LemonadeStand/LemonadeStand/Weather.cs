@@ -34,5 +34,10 @@ namespace LemonadeStand
 
             condition = weatherConditions[index];
         }
+
+        public void SetTemperature()
+        {
+
+        }
     }
 }
