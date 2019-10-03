@@ -12,19 +12,27 @@ namespace LemonadeStand
         Player player;
         List<Day> days;
         int currentDay;
+        Store store;
 
         //constructor (Spawner)
         public Game()
         {
             days = new List<Day>() { new Day(), new Day(), new Day(), new Day(), new Day(), new Day(), new Day() };
             player = new Player();
+            store = new Store();
         }
 
         //member methods (Can Do)
         public void RunGame()
         {
             UserInterface.DisplayRules();
+            UserInterface.DisplayWeatherForecast();
             player.recipe.SetRecipe();
+            UserInterface.DisplayStock();
+            store.BuyCups();
+            store.BuyLemon();
+            store.BuySugar();
+            store.BuyIce();
         }
 
 
@@ -33,6 +41,9 @@ namespace LemonadeStand
         {
             Weather weather = new Weather();
         }
+
+
+        
 
 
 

@@ -22,7 +22,25 @@ namespace LemonadeStand
             Console.WriteLine("Starting money: $20");
             Console.WriteLine("Starting Inventory: "); //we could potentially make a list of the inventory the player has and update it based on user input
         }
+        public static void DisplayStock()
+        {
+            Console.WriteLine("Cups: 25 for 0.85, 50 for 1.73, 100 for 2.96");
+            Console.WriteLine("Lemons: 10 for 0.78, 30 for 2.24, 75 for 4.47");
+            Console.WriteLine("Cups of Sugar: 8 for 0.69, 20 for 1.52, 48 for 3.30");
+            Console.WriteLine("Ice Cubes: 100 for 0.76, 250 for 2.16, 500 for 3.54");
+        }
 
+        public static void DisplayWeatherForecast()
+        {
+            Console.WriteLine("This is the forecast for this week!");
+            Console.WriteLine("Monday: Cloudy with a temperature of about 65 degrees.");
+            Console.WriteLine("Tuesday: Hazy with a temperature of about 76 degrees.");
+            Console.WriteLine("Wednesday: Sunny with a temperature of about 82 degrees.");
+            Console.WriteLine("Thursday: Rainy with a temperature of about 62 degrees.");
+            Console.WriteLine("Friday: Partly Cloudy with a temperature of about 91 degrees.");
+            Console.WriteLine("Saturday: Sunny with a temperature of about 76 degrees.");
+            Console.WriteLine("Sunday: Rainy with a temperature of about 68 degrees.");
+        }
         // all your Console Write Lines and Read Lines will go in here
     }
 }

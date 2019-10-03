@@ -17,7 +17,10 @@ namespace LemonadeStand
         //constructor (Spawner)
         public Inventory()
         {
-            
+            cups = new List<Cup>();
+            lemons = new List<Lemon>();
+            cupsOfSugar = new List<Sugar>();
+            iceCubes = new List<IceCube>();
         }
 
         //member methods (Can Do)

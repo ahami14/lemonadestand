@@ -22,50 +22,44 @@ namespace LemonadeStand
             amountOfLemons = 0;
             amountOfSugar = 0;
             amountOfIceCubes = 0;
+            player = new Player();
+
         }
 
         //member methods (Can Do)
-        public void ItemsInStock()//move this to userinterface
-        {
-            Console.WriteLine("Cups: 25 for 0.85, 50 for 1.73, 100 for 2.96");
-            Console.WriteLine("Lemons: 10 for 0.78, 30 for 2.24, 75 for 4.47");
-            Console.WriteLine("Cups of Sugar: 8 for 0.69, 20 for 1.52, 48 for 3.30");
-            Console.WriteLine("Ice Cubes: 100 for 0.76, 250 for 2.16, 500 for 3.54");
-        }
 
         public void BuyCups()
         {
             Console.WriteLine("How many cups are you buying?");
             cupAmount = int.Parse(Console.ReadLine());
 
-            if (cupAmount == 25)
+            if (player.wallet.Money > 0.85)
             {
-                player.wallet.Money--;
-            }
-            else if (cupAmount == 50)
-            {
-                player.wallet.Money--;
-            }
-            else
-            {
-                player.wallet.Money--;
-            }
+                if (cupAmount == 25)
+                {
+                    player.wallet.Money -= 0.85;
+                }
+                else if (cupAmount == 50)
+                {
+                    player.wallet.Money -= 1.73;
+                }
+                else
+                {
+                    player.wallet.Money -= 2.96;
+                }
 
 
-            if (player.wallet.Money > 2.96)
-            {
-                //buy the cups
+
+                //do an if statement checking money in account, if it has more than the highest amount, then buy the item, otherwise don't
+                for (int i = 0; i < cupAmount; i++)
+                {
+                    Cup cup = new Cup();
+                    player.inventory.cups.Add(cup);
+                }
             }
             else
             {
                 Console.WriteLine("You do not have enough money to buy the cups!");
-            }
-
-            //do an if statement checking money in account, if it has more than the highest amount, then buy the item, otherwise don't
-            for (int i = 0; i < cupAmount; i++)
-            {
-                Cup cup = new Cup();
-                player.inventory.cups.Add(cup);
             }
         }
 
@@ -75,34 +69,32 @@ namespace LemonadeStand
             Console.WriteLine("How many lemons are you buying?");
             amountOfLemons = int.Parse(Console.ReadLine());
 
-            if (amountOfLemons == 10)
+            if (player.wallet.Money > 0.78)
             {
-                player.wallet.Money--;
-            }
-            else if (amountOfLemons == 30)
-            {
-                player.wallet.Money--;
-            }
-            else
-            {
-                player.wallet.Money--;
-            }
+                if (amountOfLemons == 10)
+                {
+                    player.wallet.Money -= 0.78;
+                }
+                else if (amountOfLemons == 30)
+                {
+                    player.wallet.Money -= 2.24;
+                }
+                else
+                {
+                    player.wallet.Money -= 4.47;
+                }
 
 
-            if (player.wallet.Money > 4.47)
-            {
-                //buy the lemons
+
+                for (int i = 0; i < amountOfLemons; i++)
+                {
+                    Lemon lemon = new Lemon();
+                    player.inventory.lemons.Add(lemon);
+                }
             }
             else
             {
                 Console.WriteLine("You do not have enough money to buy the lemons!");
-            }
-
-
-            for (int i = 0; i < amountOfLemons; i++)
-            {
-                Lemon lemon = new Lemon();
-                player.inventory.lemons.Add(lemon);
             }
         }
 
@@ -111,33 +103,31 @@ namespace LemonadeStand
             Console.WriteLine("How many cups of sugar are you buying?");
             amountOfSugar = int.Parse(Console.ReadLine());
 
-            if (amountOfSugar == 8)
+            if (player.wallet.Money > 0.69)
             {
-                player.wallet.Money--;
-            }
-            else if (amountOfSugar == 20)
-            {
-                player.wallet.Money--;
-            }
-            else
-            {
-                player.wallet.Money--;
-            }
+                if (amountOfSugar == 8)
+                {
+                    player.wallet.Money -= 0.69;
+                }
+                else if (amountOfSugar == 20)
+                {
+                    player.wallet.Money -= 1.52;
+                }
+                else
+                {
+                    player.wallet.Money -= 3.30;
+                }
 
-            if (player.wallet.Money > 3.30)
-            {
-                //buy the sugar
+
+                for (int i = 0; i < amountOfSugar; i++)
+                {
+                    Sugar sugar = new Sugar();
+                    player.inventory.cupsOfSugar.Add(sugar);
+                }
             }
             else
             {
                 Console.WriteLine("You do not have enough money to buy the lemons!");
-            }
-
-
-            for (int i = 0; i < amountOfSugar; i++)
-            {
-                Sugar sugar = new Sugar();
-                player.inventory.cupsOfSugar.Add(sugar);
             }
         }
 
@@ -148,33 +138,32 @@ namespace LemonadeStand
             Console.WriteLine("How many ice cubes are you buying?");
             amountOfIceCubes = int.Parse(Console.ReadLine());
 
-            if (amountOfIceCubes == 8)
+            if (player.wallet.Money > 0.74)
             {
-                player.wallet.Money--;
-            }
-            else if (amountOfIceCubes == 20)
-            {
-                player.wallet.Money--;
-            }
-            else
-            {
-                player.wallet.Money--;
-            }
+                if (amountOfIceCubes == 100)
+                {
+                    player.wallet.Money -= 0.74;
+                }
+                else if (amountOfIceCubes == 250)
+                {
+                    player.wallet.Money -= 2.16;
+                }
+                else
+                {
+                    player.wallet.Money -= 3.54;
+                }
 
-            if (player.wallet.Money > 3.54)
-            {
-                //buy the Ice
+
+
+                for (int i = 0; i < amountOfIceCubes; i++)
+                {
+                    IceCube iceCube = new IceCube();
+                    player.inventory.iceCubes.Add(iceCube);
+                }
             }
             else
             {
                 Console.WriteLine("You do not have enough money to buy the lemons!");
-            }
-
-
-            for (int i = 0; i < amountOfIceCubes; i++)
-            {
-                IceCube iceCube = new IceCube();
-                player.inventory.iceCubes.Add(iceCube);
             }
 
         }

@@ -26,7 +26,7 @@ namespace LemonadeStand
         }
 
         //member methods (Can Do)
-        public void WeatherForecast()
+        public void ConditionsForWeather()
         {
             Random rng = new Random();
 
@@ -37,7 +37,14 @@ namespace LemonadeStand
 
         public void SetTemperature()
         {
-
+            Random rng = new Random();
+            temperature = rng.Next(60, 100);
+            
+        }
+        public void PredictWeather()
+        {
+            predictForecast = (condition + temperature);
+            Console.WriteLine(predictForecast);
         }
     }
 }
