@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Day
+    public class Day
     {
         //member vairables (Has A)
         public Weather weather;
-        public List<Customer> customer;
+        public List<Customer> customers;
         public List<string> days;
+        
 
         //constructor (Spawner)
         public Day()
@@ -23,9 +24,14 @@ namespace LemonadeStand
 
 
         //member methods (Can Do)
-        public void DisplayDay()
+        //will have list and loop of customers here
+        public void CreateCustomer()
         {
-
+            for( int i = 0; i<1; i++)
+            {
+                List<Customer> customers;
+                
+            }
         }
     }
 }

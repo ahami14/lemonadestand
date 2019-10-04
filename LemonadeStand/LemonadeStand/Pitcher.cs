@@ -12,6 +12,10 @@ namespace LemonadeStand
         public int cupsLeftInPitcher;
 
         //constructor (Spawner)
+        public Pitcher()
+        {
+
+        }
 
         //member methods (Can Do)
     }

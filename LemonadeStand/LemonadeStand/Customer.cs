@@ -6,26 +6,27 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Customer
+    public class Customer
     {
         //member vairables (Has A)
-        private List<string> names;
         public string name;
         public List<string> weatherConditions;
         Weather conditions;
+        Player player;
 
         //constructor (Spawner)
         public Customer()
         {
-            names = new List<string>();
-            
+            Player player = new Player();
 
         }
+        
 
         //member methods (Can Do)
-        public void DecisionToBuy()
+        public void DecisionToBuy(Weather weather)//done here
         {
-
+            if (weather.condition == "Sunny" || weather.condition == "Partly Cloudy" || weather.condition == "Cloudy" && weather.temperature >= 65 && weather.temperature <= 100);
+            player.wallet.Money ++ ;
         }
             
     }

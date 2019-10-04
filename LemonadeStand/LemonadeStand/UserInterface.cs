@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member vairables (Has A)
 
-        //constructor (Spawner)
+
 
         //member methods (Can Do)
         public static void DisplayRules()
@@ -20,7 +20,6 @@ namespace LemonadeStand
             Console.WriteLine("Each day you will hav the option to refill your stock of lemons, sugar, ice cubes, and cups!");
             Console.WriteLine("You start out with $20 to spend! Hopefully you will earn a profit by the end of the week!");
             Console.WriteLine("Starting money: $20");
-            Console.WriteLine("Starting Inventory: "); //we could potentially make a list of the inventory the player has and update it based on user input
         }
         public static void DisplayStock()
         {
@@ -30,17 +29,29 @@ namespace LemonadeStand
             Console.WriteLine("Ice Cubes: 100 for 0.76, 250 for 2.16, 500 for 3.54");
         }
 
-        public static void DisplayWeatherForecast()
+        public static void DisplayWeatherForecast(List<Day> days)
         {
             Console.WriteLine("This is the forecast for this week!");
-            Console.WriteLine("Monday: Cloudy with a temperature of about 65 degrees.");
-            Console.WriteLine("Tuesday: Hazy with a temperature of about 76 degrees.");
-            Console.WriteLine("Wednesday: Sunny with a temperature of about 82 degrees.");
-            Console.WriteLine("Thursday: Rainy with a temperature of about 62 degrees.");
-            Console.WriteLine("Friday: Partly Cloudy with a temperature of about 91 degrees.");
-            Console.WriteLine("Saturday: Sunny with a temperature of about 76 degrees.");
-            Console.WriteLine("Sunday: Rainy with a temperature of about 68 degrees.");
+
+            foreach (Day day in days)
+            {
+                Console.WriteLine(day.weather);
+            }
+
+
+            //Console.WriteLine("This is the forecast for this week!");
+            //Console.WriteLine("Monday: Cloudy with a temperature of about 65 degrees.");
+            //Console.WriteLine("Tuesday: Hazy with a temperature of about 76 degrees.");
+            //Console.WriteLine("Wednesday: Sunny with a temperature of about 82 degrees.");
+            //Console.WriteLine("Thursday: Rainy with a temperature of about 62 degrees.");
+            //Console.WriteLine("Friday: Partly Cloudy with a temperature of about 91 degrees.");
+            //Console.WriteLine("Saturday: Sunny with a temperature of about 76 degrees.");
+            //Console.WriteLine("Sunday: Rainy with a temperature of about 68 degrees.");
         }
-        // all your Console Write Lines and Read Lines will go in here
+
+        public static void DisplayActualWeather()
+        {
+            Console.WriteLine();
+        }
     }
 }

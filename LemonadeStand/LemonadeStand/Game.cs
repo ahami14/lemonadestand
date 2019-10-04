@@ -18,6 +18,13 @@ namespace LemonadeStand
         public Game()
         {
             days = new List<Day>() { new Day(), new Day(), new Day(), new Day(), new Day(), new Day(), new Day() };
+            
+            //for(int i = 0; i < 7; i++)
+            //{
+            //    Day day = new Day();
+            //    days.Add(day);
+            //}
+
             player = new Player();
             store = new Store();
         }
@@ -33,6 +40,7 @@ namespace LemonadeStand
             store.BuyLemon();
             store.BuySugar();
             store.BuyIce();
+            Console.WriteLine(player.wallet.Money);
         }
 
 

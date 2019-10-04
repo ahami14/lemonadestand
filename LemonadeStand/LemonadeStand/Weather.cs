@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Weather
+    public class Weather
     {
         //member vairables (Has A)
         public string condition;
@@ -23,6 +23,8 @@ namespace LemonadeStand
             weatherConditions.Add("Rainy");
             weatherConditions.Add("Partly Cloudy");
             weatherConditions.Add("Hazy");
+
+
         }
 
         //member methods (Can Do)
