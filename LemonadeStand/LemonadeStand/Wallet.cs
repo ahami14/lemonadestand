@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Wallet
+   public class Wallet
     {
         //member variable (Has A)
         private double money; //make a money method public so we can subtract from the wallet since this one is private

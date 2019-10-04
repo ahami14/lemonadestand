@@ -32,8 +32,9 @@ namespace LemonadeStand
         //member methods (Can Do)
         public void RunGame()
         {
+
             UserInterface.DisplayRules();
-            UserInterface.DisplayWeatherForecast();
+            UserInterface.DisplayWeatherForecast(days);
             player.recipe.SetRecipe();
             UserInterface.DisplayStock();
             store.BuyCups();
@@ -41,13 +42,8 @@ namespace LemonadeStand
             store.BuySugar();
             store.BuyIce();
             Console.WriteLine(player.wallet.Money);
-        }
-
-
-
-        public void CustomersChoice()
-        {
-            Weather weather = new Weather();
+            player.pitcher.DisplayPitcherCups();
+            UserInterface.DisplayActualWeather(days);
         }
 
 

@@ -12,11 +12,12 @@ namespace LemonadeStand
         public Weather weather;
         public List<Customer> customers;
         public List<string> days;
-        
+
 
         //constructor (Spawner)
         public Day()
         {
+            customers = new List<Customer>();
             weather = new Weather();
             days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
@@ -27,11 +28,18 @@ namespace LemonadeStand
         //will have list and loop of customers here
         public void CreateCustomer()
         {
-            for( int i = 0; i<1; i++)
+            int countOfNewCustomers = 100;
+
+            for( int i = 0; i < countOfNewCustomers; i++)
             {
-                List<Customer> customers;
                 
+                // create new customer
+                // add new customer to list
             }
+        }
+        public void ChoiceToBuy()
+        {
+            //this loop will loop throught the method in the customer class determining whether or not they buy lemonade
         }
     }
 }

@@ -13,6 +13,9 @@ namespace LemonadeStand
         public int temperature;
         private List<string> weatherConditions;
         public string predictForecast;
+        public string actualWeather;
+        public int actualTemperature;
+        public string actualCondition;
 
         //constructor (Spawner)
         public Weather()
@@ -24,7 +27,9 @@ namespace LemonadeStand
             weatherConditions.Add("Partly Cloudy");
             weatherConditions.Add("Hazy");
 
-
+            ConditionsForWeather();
+            SetTemperature();
+            PredictWeather();
         }
 
         //member methods (Can Do)
@@ -45,8 +50,25 @@ namespace LemonadeStand
         }
         public void PredictWeather()
         {
-            predictForecast = (condition + temperature);
-            Console.WriteLine(predictForecast);
+            predictForecast = (condition + " " + temperature);
+        }
+
+        public void SetActualTemperature()
+        {
+            Random rng = new Random();
+            actualTemperature = rng.Next(temperature - 10);
+        }
+        public void SetActualCondition()
+        {
+            Random rng = new Random();
+
+            int index = rng.Next(weatherConditions.Count);
+
+            actualCondition = weatherConditions[index];
+        }
+        public void DisplayActualWeather()
+        {
+            actualWeather = (actualCondition + " " + actualTemperature);
         }
     }
 }
