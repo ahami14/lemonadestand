@@ -13,11 +13,12 @@ namespace LemonadeStand
         public int amountOfSugar;
         public int amountOfIceCubes;
         public double pricePerCup;
+        public double priceOfLemonade;
 
         //constructor (Spawner)
         public Recipe()
         {
-
+            
         }
         //member methods (Can Do)
         //make a method that will allow the player to set a recipe 
@@ -30,7 +31,7 @@ namespace LemonadeStand
             Console.WriteLine("How many ice cubes do you want per cup?");
             amountOfIceCubes = int.Parse(Console.ReadLine());
             Console.WriteLine("How much do you want each cup of Lemonade to cost?");
-            pricePerCup = double.Parse(Console.ReadLine());
+            priceOfLemonade = double.Parse(Console.ReadLine());
         }
     }
 }

@@ -16,10 +16,12 @@ namespace LemonadeStand
         public string actualWeather;
         public int actualTemperature;
         public string actualCondition;
+        Random rng;
 
         //constructor (Spawner)
-        public Weather()
+        public Weather(Random random)
         {
+            rng = random;
             weatherConditions = new List<string>();
             weatherConditions.Add("Sunny");
             weatherConditions.Add("Cloudy");
@@ -35,7 +37,7 @@ namespace LemonadeStand
         //member methods (Can Do)
         public void ConditionsForWeather()
         {
-            Random rng = new Random();
+       
 
             int index = rng.Next(weatherConditions.Count);
 
@@ -44,7 +46,7 @@ namespace LemonadeStand
 
         public void SetTemperature()
         {
-            Random rng = new Random();
+           
             temperature = rng.Next(60, 100);
             
         }
@@ -55,12 +57,12 @@ namespace LemonadeStand
 
         public void SetActualTemperature()
         {
-            Random rng = new Random();
+          
             actualTemperature = rng.Next(temperature - 10);
         }
         public void SetActualCondition()
         {
-            Random rng = new Random();
+      
 
             int index = rng.Next(weatherConditions.Count);
 

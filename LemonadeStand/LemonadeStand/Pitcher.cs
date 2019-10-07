@@ -10,18 +10,18 @@ namespace LemonadeStand
     {
         //member variable (Has A)
         public int cupsLeftInPitcher;
-        Player player;
         Recipe recipe;
+        
 
         //constructor (Spawner)
         public Pitcher()
         {
-            Player player = new Player();
+            
             Recipe recipe = new Recipe();
-        }
+        }  
 
         //member methods (Can Do)
-        public void DisplayPitcherCups()
+        public void DisplayPitcherCups(Player player)
         {
             string thingToPrint = "";
             thingToPrint += player.recipe.amountOfLemons + "\n";

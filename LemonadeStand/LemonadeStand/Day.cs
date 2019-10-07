@@ -12,14 +12,16 @@ namespace LemonadeStand
         public Weather weather;
         public List<Customer> customers;
         public List<string> days;
-
+        Customer customer;
+        public int numberOfDays = 7;
 
         //constructor (Spawner)
-        public Day()
+        public Day(Random random)
         {
             customers = new List<Customer>();
-            weather = new Weather();
+            weather = new Weather(random);
             days = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            
 
         }
 
@@ -32,14 +34,24 @@ namespace LemonadeStand
 
             for( int i = 0; i < countOfNewCustomers; i++)
             {
-                
+                Customer customer = new Customer();
+                customers.Add(customer);
                 // create new customer
                 // add new customer to list
             }
         }
-        public void ChoiceToBuy()
+        public void ChoiceToBuy(Weather weather, Player player, double priceOfLemonade)
         {
-            //this loop will loop throught the method in the customer class determining whether or not they buy lemonade
+            foreach (Customer customer in customers)
+            {
+                if (weather.condition == "Sunny" || weather.condition == "Partly Cloudy" || weather.condition == "Cloudy" && weather.temperature >= 70 && weather.temperature <= 100) ;
+                
+                player.wallet.Money += priceOfLemonade;
+                //loop customers over method
+                //compare to choices and see if they will buy lemonade
+            }
+            
+            //this loop will loop through the method in the customer class determining whether or not they buy lemonade
         }
     }
 }

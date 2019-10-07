@@ -31,31 +31,14 @@ namespace LemonadeStand
 
         public static void DisplayWeatherForecast(List<Day> days)
         {
-            Console.WriteLine("This is the forecast for today!");
+            Console.WriteLine("This is the forecast for this week!");
 
             foreach (Day day in days)
             {
                 Console.WriteLine(day.weather.predictForecast);
             }
-
-
-            //Console.WriteLine("This is the forecast for this week!");
-            //Console.WriteLine("Monday: Cloudy with a temperature of about 65 degrees.");
-            //Console.WriteLine("Tuesday: Hazy with a temperature of about 76 degrees.");
-            //Console.WriteLine("Wednesday: Sunny with a temperature of about 82 degrees.");
-            //Console.WriteLine("Thursday: Rainy with a temperature of about 62 degrees.");
-            //Console.WriteLine("Friday: Partly Cloudy with a temperature of about 91 degrees.");
-            //Console.WriteLine("Saturday: Sunny with a temperature of about 76 degrees.");
-            //Console.WriteLine("Sunday: Rainy with a temperature of about 68 degrees.");
         }
         //for actual weather, you can get a method in here to display the variable with the info, but the info will have to be gathered in a different class
-        public static void DisplayActualWeather(List<Day> days)
-        {
-            Console.WriteLine("Here is the actual weather!");
-            foreach (Day day in days)
-            {
-                Console.WriteLine(day.weather.actualWeather);
-            }
-        }
+        
     }
 }
