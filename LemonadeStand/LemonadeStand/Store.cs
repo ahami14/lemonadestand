@@ -16,13 +16,12 @@ namespace LemonadeStand
         int amountOfIceCubes;
 
         //constructor (Spawner)
-        public Store()
+        public Store(Player player)
         {
             cupAmount = 0;
             amountOfLemons = 0;
             amountOfSugar = 0;
             amountOfIceCubes = 0;
-            player = new Player();
 
         }
 
@@ -127,7 +126,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("You do not have enough money to buy the lemons!");
+                Console.WriteLine("You do not have enough money to buy sugar!");
             }
         }
 
@@ -163,7 +162,7 @@ namespace LemonadeStand
             }
             else
             {
-                Console.WriteLine("You do not have enough money to buy the lemons!");
+                Console.WriteLine("You do not have enough money to buy ice cubes!");
             }
 
         }

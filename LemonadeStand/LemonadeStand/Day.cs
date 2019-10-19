@@ -14,6 +14,7 @@ namespace LemonadeStand
         public List<string> days;
         Customer customer;
         public int numberOfDays = 7;
+        Player player;
 
         //constructor (Spawner)
         public Day(Random random)
@@ -40,13 +41,13 @@ namespace LemonadeStand
                 // add new customer to list
             }
         }
-        public void ChoiceToBuy(Weather weather, Player player, double priceOfLemonade)
+        public void ChoiceToBuy(Weather weather, Player player)
         {
             foreach (Customer customer in customers)
             {
-                if (weather.condition == "Sunny" || weather.condition == "Partly Cloudy" || weather.condition == "Cloudy" && weather.temperature >= 70 && weather.temperature <= 100) ;
-                
-                player.wallet.Money += priceOfLemonade;
+                if (weather.condition == "Sunny" || weather.condition == "Partly Cloudy" || weather.condition == "Cloudy" && weather.temperature >= 70 && weather.temperature <= 100) 
+
+                player.wallet.Money += player.recipe.priceOfLemonade;
                 //loop customers over method
                 //compare to choices and see if they will buy lemonade
             }

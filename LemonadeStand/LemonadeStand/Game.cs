@@ -33,7 +33,7 @@ namespace LemonadeStand
             //}
 
             player = new Player();
-            store = new Store();
+            store = new Store(player);
             day = new Day(random);
             weather = new Weather(random);
 
@@ -59,7 +59,7 @@ namespace LemonadeStand
                 Console.ReadLine();
                 player.pitcher.DisplayPitcherCups(player);
                 DisplayActualWeather();
-                day.ChoiceToBuy(weather, player, priceOfLemonade);
+                day.ChoiceToBuy(weather, player);
                 Console.WriteLine("Here is your amount of money after the day! " + player.wallet.Money);
                 Console.ReadLine();
             }
