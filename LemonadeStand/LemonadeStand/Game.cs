@@ -58,20 +58,20 @@ namespace LemonadeStand
                 Console.WriteLine("Here is your money leftover! " + player.wallet.Money);
                 Console.ReadLine();
                 player.pitcher.DisplayPitcherCups(player);
-                //DisplayActualWeather();
+                DisplayActualWeather();
                 day.ChoiceToBuy(weather, player, priceOfLemonade);
                 Console.WriteLine("Here is your amount of money after the day! " + player.wallet.Money);
                 Console.ReadLine();
             }
         }
 
-        //public void DisplayActualWeather()
-        //{
-        //    Console.WriteLine("Here is the actual weather for today! " + day.weather.actualWeather);
-        //}
+        public void DisplayActualWeather()
+        {
+            Console.WriteLine("Here is the actual weather for today! " + day.weather.actualWeather);
+        }
 
 
-        
+
 
 
 
