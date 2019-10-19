@@ -16,6 +16,7 @@ namespace LemonadeStand
         public string actualWeather;
         public int actualTemperature;
         public string actualCondition;
+        public string customerCondition;
         Random rng;
 
         //constructor (Spawner)
@@ -71,6 +72,14 @@ namespace LemonadeStand
         public void DisplayActualWeather()
         {
             actualWeather = (actualCondition + " " + actualTemperature);
+        }
+        public void SetCustomerCondition()
+        {
+
+
+            int index = rng.Next(weatherConditions.Count);
+
+            customerCondition = weatherConditions[index];
         }
     }
 }

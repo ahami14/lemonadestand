@@ -45,7 +45,9 @@ namespace LemonadeStand
         {
             foreach (Customer customer in customers)
             {
-                if (weather.condition == "Sunny" || weather.condition == "Partly Cloudy" || weather.condition == "Cloudy" && weather.temperature >= 70 && weather.temperature <= 100) 
+                player.recipe.RandomizeCustomerPriceCondition();
+                weather.SetCustomerCondition();
+                if (player.recipe.priceOfLemonade <= player.recipe.priceForCustomer || weather.customerCondition == weather.actualWeather) 
 
                 player.wallet.Money += player.recipe.priceOfLemonade;
                 //loop customers over method
